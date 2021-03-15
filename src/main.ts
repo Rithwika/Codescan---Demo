@@ -59,7 +59,7 @@ async function run(): Promise<void> {
     core.debug('[CS] CodeScan Report Tasks execution completed.')
 
     if (generateSarifFile) {
-      // We should always have single task, so it's enough to hardcode SERIF filename as codescan.sarif.
+      // We should always have single task, so it's enough to hardcode SERIF filename as codescan.sarif. 
       await Promise.all(
         tasks.map(task => {
           core.debug(`[CS] Downloading SARIF file for Report Task: ${task.id}`)
